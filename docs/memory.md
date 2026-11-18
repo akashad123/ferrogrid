@@ -59,6 +59,7 @@
 - **Security & Caching**: `vercel.json` and `.htaccess` configured with security headers and immutable asset caching.
 - **Design Spec File**: `docs/design.md` verified at exactly 0 bytes.
 - **Git Remote & Deployment**: Remote `origin` linked to `https://github.com/akashad123/ferrogrid.git`, `main` branch pushed and tracking `origin/main`.
+- **Clean Repository Structure**: Removed all legacy standalone root HTML files (18 files), legacy `js/` directory (`main.js`, `motion.js`, `lenis.min.js`), and root `css/` directory. All markup is now managed via React TSX components, with styling in `src/styles/site.css` and static assets in `public/`.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
