@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeroVideo } from '../components/common/HeroVideo';
 import { FerroMesh } from '../components/common/FerroMesh';
 import { ProjectCarousel } from '../components/common/ProjectCarousel';
 import { BrandsMarquee } from '../components/sections/BrandsMarquee';
@@ -10,16 +9,22 @@ import { SERVICES } from '../data/servicesData';
 export const HomePage: React.FC = () => {
   return (
     <>
-      {/* ====== HERO (cinematic video) ====== */}
+      {/* ====== HERO (cinematic background image) ====== */}
       <section className="hero-cine" id="home">
         <div className="hero-stage" data-mesh="reveal">
           <FerroMesh reveal />
-          <HeroVideo
-            srcBase="images/hero_video/hero-v2"
-            portraitPoster="images/hero_video/hero-v2-poster-portrait.webp"
-            landscapePoster="images/hero_video/hero-v2-poster-landscape.webp"
-            alt="Grass-roofed ferrocement cave cottages in the hills, built by FERROGRID"
-          />
+          <div className="hero-media-wrap">
+            <img
+              src="images/hero-home.jpg"
+              alt="Grass-roofed ferrocement earth-sheltered cave cottage in the hills, built by FERROGRID"
+              className="hero-bg-img"
+              width="1920"
+              height="1080"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div className="hero-shade" aria-hidden="true" />
 
           <div className="hero-content">
             <h1 className="hero-title">

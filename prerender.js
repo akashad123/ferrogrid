@@ -7,8 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const ROUTE_PRELOADS = {
   'index.html': [
-    '<link rel="preload" as="image" href="images/hero_video/hero-v2-poster-portrait.webp" media="(max-aspect-ratio: 3/4)" fetchpriority="high">',
-    '<link rel="preload" as="image" href="images/hero_video/hero-v2-poster-landscape.webp" media="(min-aspect-ratio: 3001/4000)" fetchpriority="high">'
+    '<link rel="preload" as="image" href="images/hero-home.jpg" fetchpriority="high">'
   ],
   'contact.html': [
     '<link rel="preload" as="image" href="images/project/sculpted-cave-cottages-ferrocement.webp" imagesrcset="images/project/sculpted-cave-cottages-ferrocement-800w.webp 800w, images/project/sculpted-cave-cottages-ferrocement.webp 1586w" imagesizes="100vw" fetchpriority="high">'

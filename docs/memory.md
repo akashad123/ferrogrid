@@ -65,7 +65,7 @@
   - **Removed White Borders & Inset Clipping**: Replaced entrance animation `clip-path: inset(5% 5% 5% 5% round var(--radius-xl))` with `clip-path: none`, eliminating surrounding white borders and corner rounding across all breakpoints.
   - **Removed "Trusted by 50+ Resort & Property Owners"**: Completely removed the hero badge component from `src/pages/HomePage.tsx`.
   - **Removed Header Action Badges**: Removed both the "Get Free Consultation" pill and the phone number pill (`062350 29900`) from the desktop header in `src/components/layout/Header.tsx`, adapting `.header-inner` to a clean flex layout.
-  - **Video Toggle Button Refinement**: Positioned `.hero-video-toggle` cleanly with absolute coordinates below the header bar without requiring `.hero-below` wrappers.
+  - **Background Image Migration**: Replaced the landing page background video with the high-resolution earth-sheltered ferrocement cave cottage image (`public/images/hero-home.jpg`). Removed the `<video>` element and the play/pause toggle button while maintaining full-screen edge-to-edge layout, `border-radius: 0`, interactive FerroMesh canvas, contrast-enhancing hero shade overlay, animated ticker, and CTA buttons. Configured `fetchpriority="high"` and image preload in `prerender.js`.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
