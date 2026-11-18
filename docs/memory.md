@@ -66,6 +66,9 @@
   - **Removed "Trusted by 50+ Resort & Property Owners"**: Completely removed the hero badge component from `src/pages/HomePage.tsx`.
   - **Removed Header Action Badges**: Removed both the "Get Free Consultation" pill and the phone number pill (`062350 29900`) from the desktop header in `src/components/layout/Header.tsx`, adapting `.header-inner` to a clean flex layout.
   - **Background Image Migration**: Replaced the landing page background video with the high-resolution earth-sheltered ferrocement cave cottage image (`public/images/hero-home.jpg`). Removed the `<video>` element and the play/pause toggle button while maintaining full-screen edge-to-edge layout, `border-radius: 0`, interactive FerroMesh canvas, contrast-enhancing hero shade overlay, animated ticker, and CTA buttons. Configured `fetchpriority="high"` and image preload in `prerender.js`.
+  - **Hero CTA Button Refinement**: Made both 'Get Free Consultation' and 'View Our Projects' hero buttons smaller and sleeker with compact padding (`10px 20px` desktop / `8px 16px` mobile), 13.5px typography, and 14px icons.
+  - **Removed Marquee Banner**: Removed the green marquee rectangle banner ("Swimming Pools & Resort Cottages Treehouse A-Frame Structures") from the landing page.
+  - **Shifted About Section Upward**: Moved the "About FERROGRID: We Build What Conventional Concrete Cannot Easily Do" section up directly under the hero section with a tight, responsive gap (`margin-top: clamp(20px, 3.5vw, 44px)`).
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.

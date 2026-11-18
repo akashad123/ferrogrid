@@ -6151,7 +6151,27 @@ img {
 }
 
 .hero-cine .hero-actions {
-  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-cine .hero-actions .btn {
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.hero-cine .hero-actions .btn .btn-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-cine + .about {
+  margin-top: clamp(20px, 3.5vw, 44px);
 }
 
 .hero-cine .btn-light {
@@ -6547,13 +6567,13 @@ img {
   }
 
   .hero-cine .hero-actions {
-    margin-top: 18px;
-    gap: 10px;
+    margin-top: 16px;
+    gap: 8px;
   }
 
   .hero-cine .hero-actions .btn {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 8px 16px;
+    font-size: 13px;
   }
 }
 

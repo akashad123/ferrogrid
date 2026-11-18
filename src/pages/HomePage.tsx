@@ -57,8 +57,8 @@ export const HomePage: React.FC = () => {
                 Get Free Consultation
                 <svg
                   className="btn-icon"
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -74,8 +74,8 @@ export const HomePage: React.FC = () => {
                 View Our Projects
                 <svg
                   className="btn-icon"
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -87,68 +87,6 @@ export const HomePage: React.FC = () => {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ====== MARQUEE ====== */}
-      <section className="marquee shell" aria-label="What we build">
-        <div className="marquee-band">
-          <div className="marquee-row" data-direction="-1">
-            <div className="marquee-track">
-              <span>Swimming Pools</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Resort Cottages</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Eco-Friendly Huts</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Underground Houses</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Farm Stay Buildings</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Water Features</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-            </div>
-          </div>
-          <div className="marquee-row outline" data-direction="1">
-            <div className="marquee-track">
-              <span>Ferrocement Construction</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Rock Art &amp; Grottos</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Treehouses</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>A-Frame Structures</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Landscape Works</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
-              <span>Custom Buildings</span>
-              <span className="marquee-sep" aria-hidden="true">
-                &#10022;
-              </span>
             </div>
           </div>
         </div>
