@@ -198,48 +198,46 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
       <div className="hero-shade" aria-hidden="true" />
 
       {showToggle && (
-        <div className="hero-below">
-          <button
-            type="button"
-            className={`hero-video-toggle ${isPaused ? 'is-paused' : ''}`}
-            aria-label={isPaused ? 'Play background video' : 'Pause background video'}
-            onClick={togglePlay}
-          >
-            <svg className="hero-video-ring" viewBox="0 0 48 48" aria-hidden="true">
-              <circle className="ring-track" cx="24" cy="24" r="22" />
-              <circle
-                className="ring-progress"
-                cx="24"
-                cy="24"
-                r="22"
-                style={{ strokeDashoffset: ringProgress }}
-              />
+        <button
+          type="button"
+          className={`hero-video-toggle ${isPaused ? 'is-paused' : ''}`}
+          aria-label={isPaused ? 'Play background video' : 'Pause background video'}
+          onClick={togglePlay}
+        >
+          <svg className="hero-video-ring" viewBox="0 0 48 48" aria-hidden="true">
+            <circle className="ring-track" cx="24" cy="24" r="22" />
+            <circle
+              className="ring-progress"
+              cx="24"
+              cy="24"
+              r="22"
+              style={{ strokeDashoffset: ringProgress }}
+            />
+          </svg>
+          <span className="toggle-icon">
+            <svg
+              className="icon-pause"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <rect x="5" y="4" width="4" height="16" rx="1" />
+              <rect x="15" y="4" width="4" height="16" rx="1" />
             </svg>
-            <span className="toggle-icon">
-              <svg
-                className="icon-pause"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <rect x="5" y="4" width="4" height="16" rx="1" />
-                <rect x="15" y="4" width="4" height="16" rx="1" />
-              </svg>
-              <svg
-                className="icon-play"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M7 4.5v15l12-7.5-12-7.5z" />
-              </svg>
-            </span>
-          </button>
-        </div>
+            <svg
+              className="icon-play"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M7 4.5v15l12-7.5-12-7.5z" />
+            </svg>
+          </span>
+        </button>
       )}
     </>
   );

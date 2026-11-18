@@ -60,6 +60,12 @@
 - **Design Spec File**: `docs/design.md` verified at exactly 0 bytes.
 - **Git Remote & Deployment**: Remote `origin` linked to `https://github.com/akashad123/ferrogrid.git`, `main` branch pushed and tracking `origin/main`.
 - **Clean Repository Structure**: Removed all legacy standalone root HTML files (18 files), legacy `js/` directory (`main.js`, `motion.js`, `lenis.min.js`), and root `css/` directory. All markup is now managed via React TSX components, with styling in `src/styles/site.css` and static assets in `public/`.
+- **Hero & Header Visual Enhancements (Completed)**:
+  - **Full-Screen Edge-to-Edge Hero**: Removed `.shell` wrapper from `.hero-cine`, set `padding-top: 0`, and set `.hero-stage` to `100vw` width and `100vh`/`100svh` height with `border-radius: 0` for sharp, borderless edges.
+  - **Removed White Borders & Inset Clipping**: Replaced entrance animation `clip-path: inset(5% 5% 5% 5% round var(--radius-xl))` with `clip-path: none`, eliminating surrounding white borders and corner rounding across all breakpoints.
+  - **Removed "Trusted by 50+ Resort & Property Owners"**: Completely removed the hero badge component from `src/pages/HomePage.tsx`.
+  - **Removed Header Action Badges**: Removed both the "Get Free Consultation" pill and the phone number pill (`062350 29900`) from the desktop header in `src/components/layout/Header.tsx`, adapting `.header-inner` to a clean flex layout.
+  - **Video Toggle Button Refinement**: Positioned `.hero-video-toggle` cleanly with absolute coordinates below the header bar without requiring `.hero-below` wrappers.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.

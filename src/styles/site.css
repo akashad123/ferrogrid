@@ -376,10 +376,10 @@ main > section + section {
 }
 
 .header-inner {
-  display: grid;
-  grid-template-columns: 1.12fr 1fr;
-  gap: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 22px 24px 0 var(--panel-pad);
   border-radius: 999px;
   transition: background var(--dur) ease, box-shadow var(--dur) ease, padding var(--dur) var(--ease-out);
@@ -5960,7 +5960,9 @@ img {
 .hero-cine {
   position: relative;
   display: grid;
-  padding-top: 16px;
+  padding-top: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .hero-stage,
@@ -5975,13 +5977,14 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 640px;
-  height: calc(100vh - 32px);
-  height: calc(100svh - 32px);
-  max-height: 980px;
-  padding: 120px var(--panel-pad) 196px;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  max-height: none;
+  padding: 120px var(--panel-pad) clamp(48px, 6vh, 80px);
   overflow: hidden;
-  border-radius: var(--radius-xl);
+  border-radius: 0;
   background: var(--clr-green-deep);
   color: #fff;
 }
@@ -6235,7 +6238,10 @@ img {
 
 /* ----- Video pause / play control ----- */
 .hero-video-toggle {
-  position: relative;
+  position: absolute;
+  top: 104px;
+  right: clamp(20px, 3.5vw, 44px);
+  z-index: 10;
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
@@ -6245,7 +6251,7 @@ img {
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(7, 22, 13, 0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #fff;
@@ -6326,12 +6332,11 @@ img {
 /* ----- Entrance: the video panel opens, then the text follows ----- */
 @media (prefers-reduced-motion: no-preference) {
   .hero-stage {
-    clip-path: inset(0 0 0 0 round var(--radius-xl));
-    transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.18, 1) var(--enter-base);
+    clip-path: none;
   }
 
   html.js:not(.is-ready) .hero-stage {
-    clip-path: inset(5% 5% 5% 5% round var(--radius-xl));
+    clip-path: none;
   }
 
   html.is-settled .hero-stage {
@@ -6380,9 +6385,10 @@ img {
 
   .hero-stage {
     height: auto;
-    min-height: max(560px, calc(100vh - 32px));
-    min-height: max(560px, calc(100svh - 32px));
+    min-height: 100vh;
+    min-height: 100svh;
     max-height: none;
+    border-radius: 0;
     padding: 124px clamp(22px, 5vw, 48px) clamp(28px, 5vw, 48px);
   }
 
@@ -6451,8 +6457,9 @@ img {
 /* ----- Phones ----- */
 @media (max-width: 768px) {
   .hero-stage {
-    min-height: max(540px, calc(100vh - 32px));
-    min-height: max(540px, calc(100svh - 32px));
+    min-height: 100vh;
+    min-height: 100svh;
+    border-radius: 0;
     padding: 156px 20px 26px;   /* text stays clear of the menu bar and video control on small phones */
   }
 

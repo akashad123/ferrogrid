@@ -11,7 +11,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       {/* ====== HERO (cinematic video) ====== */}
-      <section className="hero-cine shell" id="home">
+      <section className="hero-cine" id="home">
         <div className="hero-stage" data-mesh="reveal">
           <FerroMesh reveal />
           <HeroVideo
@@ -22,11 +22,6 @@ export const HomePage: React.FC = () => {
           />
 
           <div className="hero-content">
-            <div className="hero-badge">
-              <span className="hero-badge-dot" />
-              Trusted by 50+ Resort &amp; Property Owners
-            </div>
-
             <h1 className="hero-title">
               Specialists in Ferrocement <em>Swimming Pools,</em> Resort Cottages &amp; Innovative
               Structures
