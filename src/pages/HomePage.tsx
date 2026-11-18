@@ -331,12 +331,27 @@ export const HomePage: React.FC = () => {
                 />
               </div>
               <div className="service-card-body">
-                <span className="service-card-tag">{s.shortTitle}</span>
                 <h3>{s.title}</h3>
                 <p>{s.description.slice(0, 140)}...</p>
-                <span className="service-card-link">
-                  Learn more &rarr;
-                </span>
+                <div className="service-card-action">
+                  <span className="btn-learn-more">
+                    Learn more
+                    <svg
+                      className="btn-icon"
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </a>
           ))}

@@ -80,6 +80,11 @@
       - Left column: Detailed narrative ("Why Ferrocement? - Sculptural freedom with superior strength, rapid execution, and zero shuttering constraints") accompanied by 3 checkmarked technical highlights (60% less concrete volume, seamless monolithic shell, natural earth integration) and action buttons ('More About FERROGRID' & 'How We Build').
       - Right column: Multi-image composition featuring the specialised site crew on site (`images/team/morning-briefing.webp`) and finished earth-sheltered living-roof cottages (`images/cottages/hillside-eco-cabins.webp`), complemented by glassmorphism captions and a floating experience badge ("Since 1998 • South India's Leading Ferrocement Developers").
     - **Design System Fidelity**: Maintained sharp edges (`border-radius: 0;`), clean hover animations, high contrast, and responsive fluid layouts without horizontal scroll or layout shifts.
+  - **Services Section Refinement (Home Page)**:
+    - **Uniform Image Height**: Configured `.service-card-media` with `height: 220px; aspect-ratio: 16 / 10; overflow: hidden; object-fit: cover;` ensuring all 6 service card images render with exact identical heights across all breakpoints.
+    - **Removed Redundant Captions**: Removed category badge tags (`{s.shortTitle}`) such as 'Swimming Pools', 'Resort Cottages', 'Eco-friendly Huts' so cards lead directly with their clear, bold `<h3>` headings.
+    - **Smaller 'Learn More' Button**: Replaced plain link with a sleek, compact button (`.btn-learn-more`) featuring compact padding (`6px 14px`), 12.5px typography, subtle border, sharp edges (`border-radius: 0;`), and arrow hover transition.
+    - **Sharp-Edged Cards**: Enforced `border-radius: 0;` on all cards and image media containers per architectural UI rules.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
