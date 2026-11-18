@@ -95,60 +95,207 @@ export const HomePage: React.FC = () => {
       {/* ====== ABOUT INTRO ====== */}
       <section className="about shell" id="about">
         <div className="panel about-panel">
+          {/* Section Head: Eyebrow + Title + Contextual Narrative */}
           <div className="section-head split reveal">
-            <div>
+            <div className="about-head-main">
               <span className="section-label">About FERROGRID</span>
-              <h2 className="section-title">We Build What Conventional Concrete Cannot Easily Do</h2>
+              <h2 className="section-title">
+                We Build What Conventional Concrete <em>Cannot Easily Do.</em>
+              </h2>
             </div>
-            <p className="section-aside">
-              Headquartered in Sultan Bathery, Wayanad —
-              <span>
-                crafting lightweight, high-strength ferrocement structures across South India for over
-                two decades.
-              </span>
-            </p>
+            <div className="section-aside about-head-aside">
+              <p className="about-aside-lead">
+                Headquartered in Sultan Bathery, Wayanad — crafting lightweight, high-strength ferrocement structures across South India for over 26 years.
+              </p>
+              <p className="about-aside-sub">
+                We replace rigid wooden shuttering with dense multi-layered wire mesh and polymer-modified matrix, enabling fluid curves, living green roofs, and cave architecture.
+              </p>
+            </div>
           </div>
 
-          <div className="about-grid">
-            <div className="about-stats-grid">
-              <div className="hero-stat reveal" style={{ transitionDelay: '0.05s' }}>
-                <div className="hero-stat-num" data-count="26">
+          {/* Four Redesigned Metric Cards in an Elegant Deck */}
+          <div className="about-stats-deck">
+            <div className="about-stat-card reveal" style={{ transitionDelay: '0.05s' }}>
+              <div className="about-stat-top">
+                <span className="about-stat-icon-wrap">
+                  <img
+                    className="about-stat-icon"
+                    src="images/thumbs/stat-team.webp"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                </span>
+                <div className="about-stat-num" data-count="26">
                   26<span className="stat-suffix">+</span>
                 </div>
-                <div className="hero-stat-label">Years of Experience</div>
               </div>
-              <div className="hero-stat reveal" style={{ transitionDelay: '0.1s' }}>
-                <div className="hero-stat-num" data-count="50">
+              <h3 className="about-stat-title">Years of Experience</h3>
+              <p className="about-stat-desc">
+                Pioneering complex organic ferrocement engineering &amp; master craftsmanship since 1998.
+              </p>
+            </div>
+
+            <div className="about-stat-card reveal" style={{ transitionDelay: '0.1s' }}>
+              <div className="about-stat-top">
+                <span className="about-stat-icon-wrap">
+                  <img
+                    className="about-stat-icon"
+                    src="images/thumbs/stat-projects.webp"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                </span>
+                <div className="about-stat-num" data-count="50">
                   50<span className="stat-suffix">+</span>
                 </div>
-                <div className="hero-stat-label">Projects Completed</div>
               </div>
-              <div className="hero-stat reveal" style={{ transitionDelay: '0.15s' }}>
-                <div className="hero-stat-num" data-count="3">
+              <h3 className="about-stat-title">Projects Completed</h3>
+              <p className="about-stat-desc">
+                Swimming pools, eco-dome villas, cave cottages, underground huts &amp; grottos.
+              </p>
+            </div>
+
+            <div className="about-stat-card reveal" style={{ transitionDelay: '0.15s' }}>
+              <div className="about-stat-top">
+                <span className="about-stat-icon-wrap">
+                  <img
+                    className="about-stat-icon"
+                    src="images/thumbs/stat-states.webp"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                </span>
+                <div className="about-stat-num" data-count="3">
                   3<span className="stat-suffix">+</span>
                 </div>
-                <div className="hero-stat-label">States Covered</div>
               </div>
-              <div className="hero-stat reveal" style={{ transitionDelay: '0.2s' }}>
-                <div className="hero-stat-num" data-count="100" data-suffix="%">
+              <h3 className="about-stat-title">States Covered</h3>
+              <p className="about-stat-desc">
+                Active project footprint across tourist destinations in Kerala, Karnataka &amp; Tamil Nadu.
+              </p>
+            </div>
+
+            <div className="about-stat-card reveal" style={{ transitionDelay: '0.2s' }}>
+              <div className="about-stat-top">
+                <span className="about-stat-icon-wrap">
+                  <img
+                    className="about-stat-icon"
+                    src="images/thumbs/stat-clients.webp"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                </span>
+                <div className="about-stat-num" data-count="100" data-suffix="%">
                   100<span className="stat-suffix">%</span>
                 </div>
-                <div className="hero-stat-label">In-House Machinery</div>
+              </div>
+              <h3 className="about-stat-title">In-House Machinery</h3>
+              <p className="about-stat-desc">
+                Directly owned JCB backhoes, shotcrete pumps, heavy-duty mixers &amp; logistics fleet.
+              </p>
+            </div>
+          </div>
+
+          {/* Story & Multi-Image Showcase */}
+          <div className="about-story-showcase">
+            <div className="about-story-col reveal">
+              <span className="about-story-eyebrow">Why Ferrocement?</span>
+              <h3 className="about-story-heading">
+                Sculptural freedom with superior strength, rapid execution, and zero shuttering constraints.
+              </h3>
+              <p className="about-story-p">
+                Traditional concrete demands heavy formwork, produces thick flat slabs, and struggles with organic contours. Ferrocement frees architecture from geometric limits: our multi-layered high-tensile wire mesh acts as both armature and reinforcement, creating ultra-dense, thin-walled shells that are monolithic, crack-resistant, and inherently water-tight.
+              </p>
+
+              <div className="about-highlights-grid">
+                <div className="about-highlight-item">
+                  <span className="about-highlight-bullet" aria-hidden="true">✓</span>
+                  <div>
+                    <strong>60% Less Concrete Volume</strong>
+                    <span>Significantly reduces carbon footprint, structural dead load, and material transit cost.</span>
+                  </div>
+                </div>
+                <div className="about-highlight-item">
+                  <span className="about-highlight-bullet" aria-hidden="true">✓</span>
+                  <div>
+                    <strong>Seamless Monolithic Shell</strong>
+                    <span>No cold joints or casting seams, delivering permanent water-tightness for pools and earth-shelters.</span>
+                  </div>
+                </div>
+                <div className="about-highlight-item">
+                  <span className="about-highlight-bullet" aria-hidden="true">✓</span>
+                  <div>
+                    <strong>Natural Earth Integration</strong>
+                    <span>Ideal for hillside contours, subterranean Hobbit houses, and living green roofs that stay naturally cool.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="about-story-actions">
+                <a href="about.html" className="btn btn-primary btn-sm">
+                  More About FERROGRID
+                  <svg className="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="process.html" className="btn btn-ghost btn-sm">
+                  How We Build
+                </a>
               </div>
             </div>
 
-            <div className="about-media mosaic reveal" style={{ transitionDelay: '0.15s' }}>
-              <figure className="mosaic-large">
-                <img
-                  src="images/team/morning-briefing.webp"
-                  alt="FERROGRID construction crew during a morning briefing"
-                  width="1200"
-                  height="800"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Our specialised crew on site</figcaption>
-              </figure>
+            {/* Multi-Image Composition */}
+            <div className="about-images-col reveal" style={{ transitionDelay: '0.15s' }}>
+              <div className="about-image-card about-image-card-primary">
+                <figure className="about-image-figure">
+                  <img
+                    src="images/team/morning-briefing.webp"
+                    srcSet="images/team/morning-briefing-800w.webp 800w, images/team/morning-briefing.webp 1400w"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                    alt="FERROGRID specialised construction crew during a morning briefing on site"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption className="about-image-caption">
+                    <span className="caption-dot" />
+                    Specialised site crew in Wayanad
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="about-image-card about-image-card-secondary">
+                <figure className="about-image-figure">
+                  <img
+                    src="images/cottages/hillside-eco-cabins.webp"
+                    srcSet="images/cottages/hillside-eco-cabins-800w.webp 800w, images/cottages/hillside-eco-cabins.webp 1400w"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                    alt="Living-roof ferrocement earth-sheltered resort cottages in the hills"
+                    width="800"
+                    height="533"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption className="about-image-caption">
+                    <span className="caption-dot" />
+                    Living-roof resort cottages
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="about-experience-badge">
+                <span className="badge-highlight">Since 1998</span>
+                <span className="badge-label">South India&apos;s Leading Ferrocement Developers</span>
+              </div>
             </div>
           </div>
         </div>

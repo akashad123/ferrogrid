@@ -69,6 +69,17 @@
   - **Hero CTA Button Refinement**: Made both 'Get Free Consultation' and 'View Our Projects' hero buttons smaller and sleeker with compact padding (`10px 20px` desktop / `8px 16px` mobile), 13.5px typography, and 14px icons.
   - **Removed Marquee Banner**: Removed the green marquee rectangle banner ("Swimming Pools & Resort Cottages Treehouse A-Frame Structures") from the landing page.
   - **Shifted About Section Upward**: Moved the "About FERROGRID: We Build What Conventional Concrete Cannot Easily Do" section up directly under the hero section with a tight, responsive gap (`margin-top: clamp(20px, 3.5vw, 44px)`).
+  - **Complete About Section Architectural Redesign**:
+    - **Header**: Refactored into a high-contrast split layout featuring a branded eyebrow label, prominent H2 headline with emphasis, and a two-paragraph technical context aside explaining the Wayanad headquarters and shutter-free ferrocement matrix.
+    - **4-Card Metric Deck (`about-stats-deck`)**: Replaced the 4 unstyled, empty vertical white stacked bars with a responsive 4-column card deck (2x2 on tablets, 1-column on mobile). Each card includes an authentic graphic icon (`stat-team.webp`, `stat-projects.webp`, `stat-states.webp`, `stat-clients.webp`), large display typography with animated `data-count` numbers and colored suffixes, bold title, and descriptive copy:
+      - `26+ Years of Experience`: Pioneering complex organic ferrocement engineering & master craftsmanship since 1998.
+      - `50+ Projects Completed`: Swimming pools, eco-dome villas, cave cottages, underground huts & grottos.
+      - `3+ States Covered`: Active ongoing execution across Kerala, Tamil Nadu, and Karnataka.
+      - `100% In-House Machinery`: Proprietary mobile mortar spraying rigs, mesh benders, and vibrators.
+    - **Story & Technical Advantages Showcase (`about-story-showcase`)**:
+      - Left column: Detailed narrative ("Why Ferrocement? - Sculptural freedom with superior strength, rapid execution, and zero shuttering constraints") accompanied by 3 checkmarked technical highlights (60% less concrete volume, seamless monolithic shell, natural earth integration) and action buttons ('More About FERROGRID' & 'How We Build').
+      - Right column: Multi-image composition featuring the specialised site crew on site (`images/team/morning-briefing.webp`) and finished earth-sheltered living-roof cottages (`images/cottages/hillside-eco-cabins.webp`), complemented by glassmorphism captions and a floating experience badge ("Since 1998 • South India's Leading Ferrocement Developers").
+    - **Design System Fidelity**: Maintained sharp edges (`border-radius: 0;`), clean hover animations, high contrast, and responsive fluid layouts without horizontal scroll or layout shifts.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
