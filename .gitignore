@@ -42,4 +42,6 @@ cache
 .eslintcache
 
 # Scratch files
+scratch/
+dist-ssr/
 C:\Users\Akash\.gemini\antigravity\brain\**

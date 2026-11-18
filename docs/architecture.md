@@ -43,22 +43,21 @@ ferrogrid-main/
 │   └── sitemap.xml             # XML sitemap with 18 indexed routes
 ├── src/
 │   ├── app/
-│   │   ├── App.jsx             # Shell wrapper (Header, Router/View, Footer, Floats, Lightbox)
-│   │   └── routes.js           # Route manifest with metadata & component mappings
+│   │   ├── App.tsx             # Shell wrapper (Header, Router/View, Footer, Floats, Lightbox)
+│   │   └── routes.ts           # Route manifest with metadata & component mappings
 │   ├── components/
-│   │   ├── common/             # Reusable UI (Button, Pill, Breadcrumbs, PhotoLightbox, VideoPlayer)
-│   │   ├── layout/             # Header, MegaMenu, MobileDrawer, Footer, FloatingActions
-│   │   └── sections/           # Shared sections (BrandsMarquee, Testimonials, FinalCta, ProcessTimeline)
-│   ├── data/                   # Structured data for services, projects, FAQs, testimonials
-│   ├── hooks/                  # useScrollLock, useInView, useMediaQuery, useReducedMotion
-│   ├── lib/                    # lenis integration, seo utils, analytics/scroll helpers
+│   │   ├── common/             # Reusable UI (Breadcrumbs, PhotoLightbox, HeroVideo, FerroMesh, ShapeVideo, ProjectCarousel, ProjectCard)
+│   │   ├── layout/             # Header, Footer, FloatingActions, Layout
+│   │   └── sections/           # Shared sections (BrandsMarquee, Testimonials, FinalCta, ServiceDetailTemplate)
+│   ├── data/                   # Typed structured data (seoData, servicesData, projectsData, faqData, brandsData, navigationData, servicePagesData)
+│   ├── lib/                    # lenis integration, lightboxContext
 │   ├── pages/                  # Route-level components for all 19 pages
 │   ├── styles/
-│   │   ├── tokens.css          # Design tokens (colors, typography, radii, shadows, motion)
 │   │   └── site.css            # Existing comprehensive design system (reused cleanly)
-│   ├── entry-client.jsx        # Client hydration entry
-│   └── entry-server.jsx        # Server prerender entry for SSG build
-├── prerender.js                # Static site generator script (outputs 19 .html files)
+│   ├── types/                  # TypeScript interface definitions (SeoMetadata, RouteDefinition, LightboxItem, etc.)
+│   ├── entry-client.tsx        # Client hydration entry
+│   └── entry-server.tsx        # Server prerender entry for SSG build
+├── prerender.js                # Static site generator script (outputs 19 .html files with full head SEO & JSON-LD)
 ├── docs/                       # Project documentation & handover records
 ├── vercel.json                 # Security headers & asset cache configurations
 ├── vite.config.js              # Vite configuration

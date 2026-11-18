@@ -1,0 +1,387 @@
+export interface ProjectCardItem {
+  category: string;
+  categoryLabel: string;
+  ribbon?: string;
+  title: string;
+  description: string;
+  src: string;
+  srcset?: string;
+  alt: string;
+  width: number;
+  height: number;
+  location: string;
+  status: string;
+}
+
+export const PROJECTS_LIST: ProjectCardItem[] = [
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottages",
+    "ribbon": "Ongoing Work",
+    "title": "Pulpally Resort",
+    "description": "A large cluster of double-curved ferrocement eco-domes taking shape on site, each pod finished with a living green roof.",
+    "src": "images/pulpally/domes-aerial.webp",
+    "srcset": "images/pulpally/domes-aerial-800w.webp 800w, images/pulpally/domes-aerial.webp 1600w",
+    "alt": "Cluster of ferrocement eco-domes under construction at Pulpally, Wayanad",
+    "width": 1600,
+    "height": 1200,
+    "location": "Pulpally, Wayanad",
+    "status": "In Progress"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottages",
+    "ribbon": "Ongoing Work",
+    "title": "Kakkadampoyil Earth-Sheltered Retreat",
+    "description": "Grass-roofed ferrocement cottages tucked into the hillside, blending the resort into the surrounding forest.",
+    "src": "images/kakkadampoyil/earth-sheltered-retreat.webp",
+    "alt": "Grass-covered earth-sheltered ferrocement cottages in a forested valley",
+    "width": 1050,
+    "height": 1400,
+    "location": "Kakkadampoyil, Kozhikode",
+    "status": "In Progress"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "ribbon": "Ongoing Work",
+    "title": "Kakkadampoyil Valley-View Pool",
+    "description": "A freeform ferrocement pool beside a dome cottage, positioned to open out onto the valley view.",
+    "src": "images/kakkadampoyil/pool-and-cottage.webp",
+    "srcset": "images/kakkadampoyil/pool-and-cottage-800w.webp 800w, images/kakkadampoyil/pool-and-cottage.webp 1400w",
+    "alt": "Blue-tiled freeform swimming pool beside a dome cottage overlooking a valley",
+    "width": 1400,
+    "height": 1050,
+    "location": "Kakkadampoyil, Kozhikode",
+    "status": "In Progress"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottage",
+    "ribbon": "Ongoing Work",
+    "title": "Pulpally Eco-Cottage Dome",
+    "description": "Real-world on-site execution of a double-curved ferrocement cottage dome, custom-built for thermal comfort and structural resilience.",
+    "src": "images/projects/pulpally_site.jpeg",
+    "alt": "Real dome cottage construction site in Pulpally, Wayanad",
+    "width": 960,
+    "height": 1280,
+    "location": "Pulpally, Wayanad",
+    "status": "850 sq.ft"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Resort Pool",
+    "description": "A stunning 40ft infinity-edge swimming pool with integrated spa zone and natural stone deck, built using advanced ferrocement technique for a 5-star resort.",
+    "src": "images/pools/infinity-pool-retreat.webp",
+    "srcset": "images/pools/infinity-pool-retreat-800w.webp 800w, images/pools/infinity-pool-retreat.webp 1400w",
+    "alt": "Ferrocement infinity-edge swimming pool with swim-up seating",
+    "width": 1400,
+    "height": 788,
+    "location": "Wayanad",
+    "status": "2,400 sq.ft"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Premium Resort Pool",
+    "description": "An exquisitely designed ferrocement swimming pool with smooth contours and robust waterproofing.",
+    "src": "images/project/ferrocement-resort-swimming-pool.webp",
+    "srcset": "images/project/ferrocement-resort-swimming-pool-800w.webp 800w, images/project/ferrocement-resort-swimming-pool.webp 1448w",
+    "alt": "Ferrocement swimming pool design",
+    "width": 1448,
+    "height": 1086,
+    "location": "Wayanad, Kerala",
+    "status": "2,800 sq.ft"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Garden Pool Retreat",
+    "description": "A freeform kidney-shaped pool set into landscaped lawns with a warm sandstone-finish deck.",
+    "src": "images/pools/garden-pool-retreat.webp",
+    "alt": "Kidney-shaped ferrocement pool set in landscaped lawns",
+    "width": 1050,
+    "height": 1400,
+    "location": "Completed",
+    "status": "Completed"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Mosaic-Tile Courtyard Pool",
+    "description": "A rectangular pool finished in blue mosaic tiles with a terracotta-tiled courtyard surround.",
+    "src": "images/pools/mosaic-tile-pool.webp",
+    "alt": "Rectangular pool finished in blue mosaic tiles with terracotta surround",
+    "width": 1050,
+    "height": 1400,
+    "location": "Completed",
+    "status": "Tiling Stage"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Pool with Built-in Steps",
+    "description": "Mosaic tiling under way on a ferrocement pool with integrated corner steps and a seating ledge.",
+    "src": "images/pools/pool-tiling-progress.webp",
+    "srcset": "images/pools/pool-tiling-progress-800w.webp 800w, images/pools/pool-tiling-progress.webp 1400w",
+    "alt": "Workers laying mosaic tiles in a ferrocement pool with built-in steps",
+    "width": 1400,
+    "height": 1050,
+    "location": "Tiling Stage",
+    "status": "Shell Stage"
+  },
+  {
+    "category": "pools",
+    "categoryLabel": "Swimming Pool",
+    "title": "Natural Freeform Pool",
+    "description": "A curved ferrocement pool shell shaped around the natural rock and trees of a forest clearing.",
+    "src": "images/pools/freeform-pool-shell.webp",
+    "srcset": "images/pools/freeform-pool-shell-800w.webp 800w, images/pools/freeform-pool-shell.webp 1400w",
+    "alt": "Curved ferrocement pool shell in a forest clearing",
+    "width": 1400,
+    "height": 1050,
+    "location": "Shell Stage",
+    "status": "Completed"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottages",
+    "title": "Hillside Eco-Cabins",
+    "description": "Elevated resort cabins paired with arched ferrocement pods below, landscaped into a green hillside.",
+    "src": "images/cottages/hillside-eco-cabins.webp",
+    "srcset": "images/cottages/hillside-eco-cabins-800w.webp 800w, images/cottages/hillside-eco-cabins.webp 1400w",
+    "alt": "Elevated resort cabins above arched ferrocement pods on a grassy slope",
+    "width": 1400,
+    "height": 1032,
+    "location": "Completed",
+    "status": "Finishing Stage"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottage",
+    "title": "Tropical A-Frame Cabin",
+    "description": "A raised A-frame cabin with a steep shingled roof and timber-clad front, set among tropical gardens.",
+    "src": "images/cottages/a-frame-cabin.webp",
+    "alt": "Tropical A-frame cabin on stilts in a garden",
+    "width": 1050,
+    "height": 1400,
+    "location": "Finishing Stage",
+    "status": "Wayanad, Kerala"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottage",
+    "title": "Eco Dome Cottage 1",
+    "description": "A beautiful eco-friendly dome cottage built with a durable ferrocement shell for superior thermal insulation.",
+    "src": "images/project/sculpted-cave-cottages-ferrocement.webp",
+    "srcset": "images/project/sculpted-cave-cottages-ferrocement-800w.webp 800w, images/project/sculpted-cave-cottages-ferrocement.webp 1586w",
+    "alt": "Ferrocement dome cottage",
+    "width": 1586,
+    "height": 992,
+    "location": "Wayanad, Kerala",
+    "status": "750 sq.ft"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottage",
+    "title": "Organic Curved Cottage",
+    "description": "A luxurious curved-design ferrocement cottage with premium interior spaces and seamless structural lines.",
+    "src": "images/project/stilt-cottages-ferrocement-pods.webp",
+    "srcset": "images/project/stilt-cottages-ferrocement-pods-800w.webp 800w, images/project/stilt-cottages-ferrocement-pods.webp 1672w",
+    "alt": "Organic ferrocement resort cottage",
+    "width": 1672,
+    "height": 941,
+    "location": "Coorg, Karnataka",
+    "status": "1,100 sq.ft"
+  },
+  {
+    "category": "cottages",
+    "categoryLabel": "Resort Cottage",
+    "title": "Premium Eco Hut",
+    "description": "An architectural eco hut featuring optimized load-bearing structure and dynamic curves.",
+    "src": "images/project/hillside-ferrocement-cave-cottages.webp",
+    "srcset": "images/project/hillside-ferrocement-cave-cottages-800w.webp 800w, images/project/hillside-ferrocement-cave-cottages.webp 1448w",
+    "alt": "Premium ferrocement eco hut",
+    "width": 1448,
+    "height": 1086,
+    "location": "Ooty, Tamil Nadu",
+    "status": "950 sq.ft"
+  },
+  {
+    "category": "underground",
+    "categoryLabel": "Underground Structure",
+    "title": "Green-Roof Earth Cabin",
+    "description": "A fully earth-covered cabin with a living grass roof, sitting low on a hilltop to keep the valley view open.",
+    "src": "images/cottages/green-roof-vista.webp",
+    "srcset": "images/cottages/green-roof-vista-800w.webp 800w, images/cottages/green-roof-vista.webp 1400w",
+    "alt": "Grass-covered earth cabin on a hilltop with valley views",
+    "width": 1400,
+    "height": 1050,
+    "location": "Completed",
+    "status": "2023"
+  },
+  {
+    "category": "underground",
+    "categoryLabel": "Underground Structure",
+    "title": "Hobbit-Style Earth House",
+    "description": "An arched-door earth house with porthole windows, set into a moss-covered mound and reached by stone steps.",
+    "src": "images/cottages/hobbit-earth-house.webp",
+    "srcset": "images/cottages/hobbit-earth-house-800w.webp 800w, images/cottages/hobbit-earth-house.webp 1400w",
+    "alt": "Earth house with arched door and round windows set into a grassy mound",
+    "width": 1400,
+    "height": 1050,
+    "location": "2023",
+    "status": "Wayanad, Kerala"
+  },
+  {
+    "category": "underground",
+    "categoryLabel": "Underground Structure",
+    "title": "Underground Cave Hut",
+    "description": "A unique underground living space with natural insulation and waterproof ferrocement walls.",
+    "src": "images/project/earth-covered-ferrocement-huts.webp",
+    "srcset": "images/project/earth-covered-ferrocement-huts-800w.webp 800w, images/project/earth-covered-ferrocement-huts.webp 1436w",
+    "alt": "Underground ferrocement cave structure",
+    "width": 1436,
+    "height": 1095,
+    "location": "Wayanad, Kerala",
+    "status": "900 sq.ft"
+  },
+  {
+    "category": "underground",
+    "categoryLabel": "Underground Structure",
+    "title": "Heritage Underground Cave",
+    "description": "A seamless underground cave structure with durable moisture protection and load-bearing ceiling arches.",
+    "src": "images/project/ferrocement-underground-cave-entrance.webp",
+    "srcset": "images/project/ferrocement-underground-cave-entrance-800w.webp 800w, images/project/ferrocement-underground-cave-entrance.webp 1448w",
+    "alt": "Underground cave structure",
+    "width": 1448,
+    "height": 1086,
+    "location": "Wayanad, Kerala",
+    "status": "1,500 sq.ft"
+  },
+  {
+    "category": "grotto",
+    "categoryLabel": "Rock Art & Grottos",
+    "title": "Carved Stone Grotto Entrance",
+    "description": "A hand-sculpted rock grotto with carved stone pillars framing a heritage timber doorway.",
+    "src": "images/grotto/carved-stone-grotto.webp",
+    "srcset": "images/grotto/carved-stone-grotto-800w.webp 800w, images/grotto/carved-stone-grotto.webp 1400w",
+    "alt": "Carved ferrocement rock grotto with stone pillars and timber door",
+    "width": 1400,
+    "height": 788,
+    "location": "Completed",
+    "status": "Completed"
+  },
+  {
+    "category": "grotto",
+    "categoryLabel": "Rock Art & Grottos",
+    "title": "Rock Grotto with Reflective Pool",
+    "description": "A rustic rock-finish grotto with stepping stones across a shallow reflective pool.",
+    "src": "images/grotto/rock-grotto-pool.webp",
+    "alt": "Rustic rock grotto with stepping stones across a shallow pool",
+    "width": 788,
+    "height": 1400,
+    "location": "Completed",
+    "status": "Completed"
+  },
+  {
+    "category": "grotto",
+    "categoryLabel": "Rock Art & Grottos",
+    "title": "Sculpted Rock Grotto Entrance",
+    "description": "Carved rock-face steps leading up to a cave-style entrance, all shaped in ferrocement.",
+    "src": "images/grotto/sculpted-grotto-entrance.webp",
+    "srcset": "images/grotto/sculpted-grotto-entrance-800w.webp 800w, images/grotto/sculpted-grotto-entrance.webp 1400w",
+    "alt": "Sculpted rock-finish grotto with carved steps",
+    "width": 1400,
+    "height": 788,
+    "location": "Completed",
+    "status": "2022"
+  },
+  {
+    "category": "grotto",
+    "categoryLabel": "Rock Art & Grottos",
+    "title": "Illuminated Stone Grotto",
+    "description": "A stone-textured garden grotto with an arched alcove, brought to life with feature lighting at night.",
+    "src": "images/grotto/stone-grotto-night.webp",
+    "alt": "Stone grotto lit with coloured lights at night",
+    "width": 1050,
+    "height": 1400,
+    "location": "2022",
+    "status": "Completed"
+  },
+  {
+    "category": "grotto",
+    "categoryLabel": "Rock Art & Grottos",
+    "title": "Handcrafted Earthen Room",
+    "description": "A hand-sculpted interior with tree-root relief work framing a circular garden window.",
+    "src": "images/grotto/earthen-room-window.webp",
+    "alt": "Craftsman finishing a sculpted earthen wall with a circular window",
+    "width": 1050,
+    "height": 1400,
+    "location": "Completed",
+    "status": "Completed"
+  },
+  {
+    "category": "waterfeature",
+    "categoryLabel": "Water Features",
+    "title": "Garden Waterfall & Emerald Pool",
+    "description": "A multi-tier rock waterfall cascading into an emerald plunge pool, built into a tropical garden.",
+    "src": "images/pools/garden-waterfall-pool.webp",
+    "alt": "Rock waterfall cascading into a green plunge pool",
+    "width": 800,
+    "height": 1400,
+    "location": "Completed",
+    "status": "Wayanad, Kerala"
+  },
+  {
+    "category": "waterfeature",
+    "categoryLabel": "Water Features",
+    "title": "Resort Waterfall",
+    "description": "A customized resort waterfall feature built with durable ferrocement for natural design integration.",
+    "src": "images/project/ferrocement-cave-waterfall.webp",
+    "alt": "Custom resort ferrocement waterfall",
+    "width": 1097,
+    "height": 1434,
+    "location": "Wayanad, Kerala",
+    "status": "800 sq.ft"
+  },
+  {
+    "category": "waterfeature",
+    "categoryLabel": "Landscape Works",
+    "title": "Landscaping Steps",
+    "description": "Customized structural steps integrated beautifully with natural resort topography using ferrocement.",
+    "src": "images/project/sculpted-ferrocement-landscape-steps.webp",
+    "alt": "Ferrocement landscaping steps and structures",
+    "width": 985,
+    "height": 1597,
+    "location": "Munnar, Kerala",
+    "status": "1,200 sq.ft"
+  },
+  {
+    "category": "farmstay",
+    "categoryLabel": "Farm Stay",
+    "title": "Vaulted Cattle Shed",
+    "description": "A long-span vaulted ferrocement cattle shed with arched ventilation windows and an easy-wash floor.",
+    "src": "images/farm/cow-house-left.webp",
+    "srcset": "images/farm/cow-house-left-800w.webp 800w, images/farm/cow-house-left.webp 1400w",
+    "alt": "Long vaulted ferrocement cattle shed with arched windows",
+    "width": 1400,
+    "height": 1050,
+    "location": "Completed",
+    "status": "Wayanad, Kerala"
+  },
+  {
+    "category": "farmstay",
+    "categoryLabel": "Farm Stay",
+    "title": "Wayanad Farm Villa Structure",
+    "description": "Ongoing structural framework phase of a multi-level ferrocement farm resort cottage, demonstrating quick assembly times.",
+    "src": "images/projects/construction.webp",
+    "srcset": "images/projects/construction-800w.webp 800w, images/projects/construction.webp 1402w",
+    "alt": "Real construction of farm villa in Wayanad",
+    "width": 1402,
+    "height": 1122,
+    "location": "Wayanad, Kerala",
+    "status": "1,800 sq.ft"
+  }
+];

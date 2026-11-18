@@ -1,69 +1,66 @@
 # Project Memory and Developer Handover
 
-> This file is maintained automatically by the coding agent after meaningful work. It must describe the real repository state, not intended or imagined progress.
+> This file is maintained automatically by the coding agent after meaningful work. It describes the real repository state, completed phases, verification results, and developer handover instructions.
 
 ## Project
-- Name: FERROGRID React migration
-- Type: Static frontend website
-- Source: Supplied HTML/CSS/JavaScript website archive
-- Target: React-only static frontend (SSG prerendered to HTML)
-- Backend: None in scope (explicit user constraint)
-- Design specification: `docs/design.md` (intentionally empty until user supplies it)
+- **Name**: FERROGRID React migration
+- **Type**: Static frontend website (production-grade React SSG)
+- **Source**: Supplied HTML/CSS/JavaScript website archive
+- **Target**: React 18 + TypeScript + Vite static frontend with SSG prerendering to full HTML files
+- **Backend**: None (pure static architecture deployable to Vercel, Netlify, Cloudflare Pages, Apache, or any static CDN)
+- **Design Specification**: `docs/design.md` (intentionally 0 bytes)
 
-## Source Inventory & Verification (Completed in Phase 0)
-- **19 HTML Routes Audited**:
-  - `index.html` (`/`)
-  - `about.html` (`/about.html`)
-  - `contact.html` (`/contact.html`)
-  - `faq.html` (`/faq.html`)
-  - `ferrocement.html` (`/ferrocement.html`)
-  - `process.html` (`/process.html`)
-  - `projects.html` (`/projects.html`)
-  - `project-kakkadampoyil.html` (`/project-kakkadampoyil.html`)
-  - `project-pulpally.html` (`/project-pulpally.html`)
-  - `services.html` (`/services.html`)
-  - `service-eco-friendly-huts.html` (`/service-eco-friendly-huts.html`)
-  - `service-farm-stay-buildings.html` (`/service-farm-stay-buildings.html`)
-  - `service-resort-cottages.html` (`/service-resort-cottages.html`)
-  - `service-swimming-pools.html` (`/service-swimming-pools.html`)
-  - `service-underground-houses.html` (`/service-underground-houses.html`)
-  - `service-water-features.html` (`/service-water-features.html`)
-  - `privacy.html` (`/privacy.html`)
-  - `terms.html` (`/terms.html`)
-  - `404.html` (`/404.html`)
-- **Assets**: 89 unique image/video assets referenced across HTML and CSS; 0 missing assets verified on disk.
-- **Internal Links**: 27 unique internal link paths; 0 broken links verified.
-- **Forms**: Exactly 1 form on `contact.html`, submitting via Web3Forms endpoint (`https://api.web3forms.com/submit`) with access key `096fea7a-8158-4f2f-a358-c2f212d6f567`.
-- **SEO & Discovery**: Verified title, description, canonical link, OG/Twitter tags, geo tags, and JSON-LD structured data on all 18 indexable routes. `robots.txt`, `llms.txt`, `sitemap.xml`, and complete favicon suite verified.
-- **Hosting**: `vercel.json` provides security headers (`X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`) and immutable/long-term cache headers for assets.
-- **Git**: Git initialized locally with production `.gitignore`.
+## Confirmed & Implemented Decisions
+- **Language**: TypeScript (TSX) with strict typechecking (`tsconfig.json`).
+- **Architecture**: Vite + React SSG (`react-dom/server`) emitting 19 prerendered `.html` files in `dist/`.
+- **URL Preservation**: 100% preservation of all original `.html` URLs, matching `sitemap.xml` and canonical links with zero redirects or broken bookmarks.
+- **Styling**: 100% fidelity to the original design system and CSS tokens in `src/styles/site.css` (6,615 lines preserved).
+- **Interactions**:
+  - Smooth scrolling powered by Lenis (desktop fine pointers, auto-paused on modals/menus).
+  - Photo Lightbox Context with full keyboard (Esc, Left, Right) and touch swipe navigation.
+  - Responsive Hero Video with orientation and resolution switching (portrait/landscape x 720p/1080p), SVG progress ring, and playback toggle.
+  - Interactive Canvas Ferro-Mesh with elastic mouse-tracking and ripple effects.
+  - Interactive Ferrocement 4-step scrubbing video player.
+  - Touch/pointer drag Project Carousels with navigation buttons.
+  - Portfolio Category Filter with URL parameter synchronization (`projects.html?filter=...`).
+  - Web3Forms Contact form with honeypot botcheck, loading, success, and error feedback states.
+  - IntersectionObserver for scroll-reveal animations (`.reveal`, `.reveal-scale`) and animated metric counters.
 
-## Confirmed Decisions
-- Technology: React + Vite static frontend with SSG (static prerendering).
-- Visual Design: 100% preservation of existing layout, typography, colors, and motion without external framework rewrites.
-- URL Strategy: Retain existing `.html` URLs so indexable URLs and existing backlinks continue working identically.
-- No backend, Supabase, authentication, or CMS.
-- Form endpoint: Keep existing Web3Forms integration with client-side status handling.
-- `docs/design.md` remains strictly empty.
+## Completed Route Inventory (All 19 Routes Verified)
+| Route File | URL Path | Component | Status | Verified In Build |
+|---|---|---|---|---|
+| `index.html` | `/` | `HomePage` | Complete | `dist/index.html` (46.0 KB) |
+| `about.html` | `/about.html` | `AboutPage` | Complete | `dist/about.html` (41.3 KB) |
+| `ferrocement.html` | `/ferrocement.html` | `FerrocementPage` | Complete | `dist/ferrocement.html` (52.9 KB) |
+| `process.html` | `/process.html` | `ProcessPage` | Complete | `dist/process.html` (29.9 KB) |
+| `services.html` | `/services.html` | `ServicesPage` | Complete | `dist/services.html` (33.9 KB) |
+| `service-swimming-pools.html` | `/service-swimming-pools.html` | `ServiceSwimmingPoolsPage` | Complete | `dist/service-swimming-pools.html` (39.7 KB) |
+| `service-resort-cottages.html` | `/service-resort-cottages.html` | `ServiceResortCottagesPage` | Complete | `dist/service-resort-cottages.html` (39.8 KB) |
+| `service-eco-friendly-huts.html` | `/service-eco-friendly-huts.html` | `ServiceEcoFriendlyHutsPage` | Complete | `dist/service-eco-friendly-huts.html` (38.9 KB) |
+| `service-underground-houses.html` | `/service-underground-houses.html` | `ServiceUndergroundHousesPage` | Complete | `dist/service-underground-houses.html` (39.7 KB) |
+| `service-farm-stay-buildings.html` | `/service-farm-stay-buildings.html` | `ServiceFarmStayBuildingsPage` | Complete | `dist/service-farm-stay-buildings.html` (38.0 KB) |
+| `service-water-features.html` | `/service-water-features.html` | `ServiceWaterFeaturesPage` | Complete | `dist/service-water-features.html` (38.5 KB) |
+| `projects.html` | `/projects.html` | `ProjectsPage` | Complete | `dist/projects.html` (64.2 KB) |
+| `project-pulpally.html` | `/project-pulpally.html` | `ProjectPulpallyPage` | Complete | `dist/project-pulpally.html` (30.9 KB) |
+| `project-kakkadampoyil.html` | `/project-kakkadampoyil.html` | `ProjectKakkadampoyilPage` | Complete | `dist/project-kakkadampoyil.html` (30.4 KB) |
+| `contact.html` | `/contact.html` | `ContactPage` | Complete | `dist/contact.html` (27.1 KB) |
+| `faq.html` | `/faq.html` | `FaqPage` | Complete | `dist/faq.html` (37.4 KB) |
+| `privacy.html` | `/privacy.html` | `PrivacyPage` | Complete | `dist/privacy.html` (21.4 KB) |
+| `terms.html` | `/terms.html` | `TermsPage` | Complete | `dist/terms.html` (21.4 KB) |
+| `404.html` | `/404.html` | `NotFoundPage` | Complete | `dist/404.html` (16.0 KB) |
 
-## Decisions Presented to User
-- Language: JavaScript (JSX) recommended as the baseline per project specifications, with TypeScript (TSX) available if preferred.
-- SEO Rendering Strategy: Vite + React SSG generating 19 prerendered static HTML files matching the exact source URLs.
+## Automated Verification & QA Results
+- **TypeScript Compiler (`tsc --noEmit`)**: 0 errors.
+- **Production SSG Build (`npm run build`)**: Generated all 19 HTML files + bundled client JS/CSS.
+- **Media Assets Audit**: Checked 102 unique local media assets across all 19 pages — 100% present on disk in `dist/` (0 missing).
+- **Internal Links Audit**: Checked 437 unique link destinations across all 19 pages — 100% resolve to valid destinations (0 broken links).
+- **Sitemap Consistency**: All 18 canonical routes in `sitemap.xml` verified present and matching exact URLs.
+- **Search & AI Directives**: `robots.txt` and `llms.txt` verified intact in `dist/`.
+- **Security & Caching**: `vercel.json` and `.htaccess` configured with security headers and immutable asset caching.
+- **Design Spec File**: `docs/design.md` verified at exactly 0 bytes.
 
-## Work Log
-- 2026-11-17: Completed Phase 0 (Discovery & Baseline).
-  - Inspected all 19 HTML source pages, `css/site.css`, `js/main.js`, `js/motion.js`, `js/lenis.min.js`.
-  - Analyzed and mapped all DOM interactions, animations, forms, videos, and lightboxes.
-  - Audited all 89 media assets (zero missing) and 27 internal link paths (zero broken).
-  - Initialized git repository and created comprehensive `.gitignore`.
-  - Updated `docs/phases.md`, `docs/architecture.md`, `docs/memory.md`.
-  - Ready for Phase 1 (React foundation and build pipeline).
-
-## Known Risks & Mitigations
-- *Risk*: Converting to an SPA could harm SEO crawlability if HTML is not emitted.
-  *Mitigation*: Implement static prerendering (SSG) in the build step to emit full HTML for all 19 routes.
-- *Risk*: Legacy motion code directly manipulating DOM may conflict with React.
-  *Mitigation*: Encapsulate animations in React lifecycle hooks (`useEffect`, `useRef`), cleaning up event listeners, Lenis, and observers on unmount.
-
-## Exact Next Step
-Receive user confirmation on JS vs TS and the proposed SEO SSG approach, then begin Phase 1: setup Vite + React foundation, configure asset directories, migrate global styles/tokens, and establish SSG prerender pipeline.
+## Commands for Handover
+- `npm run dev`: Starts local Vite dev server with client-side routing.
+- `npm run typecheck`: Runs strict TypeScript typechecking (`tsc --noEmit`).
+- `npm run build`: Runs production client build, SSR build, and `prerender.js` to emit all 19 static HTML files to `dist/`.
+- `npm run preview`: Previews the generated `dist/` build locally.
