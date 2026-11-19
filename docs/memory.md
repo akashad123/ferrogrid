@@ -84,7 +84,19 @@
     - **Uniform Image Height**: Configured `.service-card-media` with `height: 220px; aspect-ratio: 16 / 10; overflow: hidden; object-fit: cover;` ensuring all 6 service card images render with exact identical heights across all breakpoints.
     - **Removed Redundant Captions**: Removed category badge tags (`{s.shortTitle}`) such as 'Swimming Pools', 'Resort Cottages', 'Eco-friendly Huts' so cards lead directly with their clear, bold `<h3>` headings.
     - **Smaller 'Learn More' Button**: Replaced plain link with a sleek, compact button (`.btn-learn-more`) featuring compact padding (`6px 14px`), 12.5px typography, subtle border, sharp edges (`border-radius: 0;`), and arrow hover transition.
-    - **Sharp-Edged Cards**: Enforced `border-radius: 0;` on all cards and image media containers per architectural UI rules.
+  - **Restored Project-Wide Rounded Border Radius System**:
+    - Per user explicit instruction ("The border radius should not be zero. Make it as it was initially set, rounded radius. So this project fully covers the border radius as rounded."), restored the original rounded design tokens across all components:
+      - `.about-panel`: restored to `border-radius: var(--radius-xl)` (32px desktop / 24px mobile) matching all panels.
+      - `.about-stat-card`: restored to `border-radius: var(--radius-lg)` (24px desktop / 20px mobile) with `overflow: hidden`.
+      - `.about-stat-icon-wrap`: restored to `border-radius: var(--radius-sm)` (12px).
+      - `.about-highlight-bullet`: restored to `border-radius: 50%` (circular checkmark).
+      - `.about-image-card`: restored to `border-radius: var(--radius-lg)` (24px) with `overflow: hidden`.
+      - `.about-image-caption`: restored to `border-radius: 999px` (pill chip).
+      - `.about-experience-badge`: restored to `border-radius: var(--radius-md)` (18px).
+      - `.service-card`: restored to `border-radius: var(--radius-lg)` (24px desktop / 20px mobile).
+      - `.service-card-media, .service-card-img`: restored to `border-radius: var(--radius-md)` (18px) with `overflow: hidden`.
+      - `.btn-learn-more`: set to `border-radius: 999px` (pill button matching `.btn` system).
+      - `.hero-stage`: configured with rounded bottom transition `border-radius: 0 0 var(--radius-xl) var(--radius-xl)` (`var(--radius-lg)` mobile) while maintaining full-width edge-to-edge top and sides without white borders.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
