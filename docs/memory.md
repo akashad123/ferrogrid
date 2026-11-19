@@ -111,6 +111,14 @@
     - **Removed Hover Translation**: Removed `transform: translateY(-4px)` from `.process-step:hover` (`transform: none;`) so cards stay firmly in place without jumping or lifting on hover.
     - **Gray Card Background**: Styled `.process-step` with a solid light gray background (`background: #f1f3f2; hover: #e8ecea`).
     - **Solid Orange Step Numbers**: Updated `.step-num` from transparent stroked outline to solid brand orange (`color: var(--clr-orange); -webkit-text-stroke: 0; font-weight: 500;`) permanently across normal, hover, and active states.
+  - **Strength Section, Client Stories CTA, and Site-Wide Zero-Translate Refinements**:
+    - **Reduced Strength Section Labels**: Reduced `.fleet-item figcaption` padding to `6px 14px`, font size to `12px`, and letter-spacing to `0.01em` across 'Heavy Transport', 'Excavation & Earthworks', and 'Material Delivery' badges.
+    - **Global Uniform Button Sizing for Client Stories CTA**: Styled `.testimonials-cta .btn` with the global compact button dimensions (`padding: 10px 22px; font-size: 13.5px; font-weight: 600; gap: 8px;` and `14px` icon), matching the hero and services CTA buttons.
+    - **Eliminated All Translate Hover Effects Across the Entire Website**:
+      - Updated `.btn:hover` and `.btn:hover .btn-icon` to `transform: none;` (buttons and arrows no longer shift/translate on hover).
+      - Updated `.btn-ghost:hover .btn-icon`, `.btn-glass:hover .btn-icon`, and `.service-card:hover .btn-learn-more .btn-icon` to `transform: none;`.
+      - Updated `.pill:hover`, `.about-stat-card:hover`, `.carousel-btn:hover:not(:disabled)`, `.project-card:hover`, and `.hero-steps a:hover` to `transform: none;`.
+      - Updated `.float-btn .float-label` to remain static at `transform: translateY(-50%);` without horizontal translate jumping on hover.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
