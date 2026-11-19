@@ -1387,7 +1387,46 @@ main > section + section {
 
 .carousel-nav {
   display: flex;
-  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: 0 var(--panel-pad);
+}
+
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--clr-ink);
+  border: 1px solid rgba(21, 32, 26, 0.16);
+  box-shadow: 0 4px 14px rgba(16, 32, 22, 0.06);
+  cursor: pointer;
+  transition: all var(--dur-fast) ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--clr-green);
+  color: #ffffff;
+  border-color: var(--clr-green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(16, 32, 22, 0.15);
+}
+
+.carousel-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.96);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(21, 32, 26, 0.08);
 }
 
 /* ===== PROCESS ===== */
@@ -1406,30 +1445,32 @@ main > section + section {
   position: relative;
   padding: 28px 24px 30px;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--clr-line);
-  transition: background var(--dur) ease, border-color var(--dur) ease, transform var(--dur) var(--ease-out);
+  border: 1px solid rgba(21, 32, 26, 0.08);
+  background: #f1f3f2;
+  transition: background var(--dur) ease, border-color var(--dur) ease, box-shadow var(--dur) ease;
 }
 
 .process-step:hover {
-  background: var(--clr-panel);
-  border-color: transparent;
-  transform: translateY(-4px);
+  background: #e8ecea;
+  border-color: rgba(35, 101, 55, 0.2);
+  transform: none;
+  box-shadow: 0 4px 16px rgba(16, 32, 22, 0.04);
 }
 
 .step-num {
   display: block;
-  font-size: 84px;
-  font-weight: 300;
+  font-size: 80px;
+  font-weight: 500;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(35, 101, 55, 0.45);
-  margin-bottom: 28px;
-  transition: -webkit-text-stroke-color var(--dur) ease;
+  color: var(--clr-orange);
+  -webkit-text-stroke: 0;
+  margin-bottom: 24px;
 }
 
 .process-step:hover .step-num {
-  -webkit-text-stroke-color: var(--clr-orange);
+  color: var(--clr-orange);
+  -webkit-text-stroke: 0;
 }
 
 .process-step h3 {
@@ -3289,16 +3330,16 @@ main > .marquee {
 }
 
 .process-step .step-num {
-  transition: -webkit-text-stroke-color var(--dur) ease, color var(--dur) ease;
+  transition: color var(--dur) ease;
 }
 
 .process-step.is-active {
-  border-color: rgba(255, 103, 0, 0.3);
+  border-color: rgba(255, 103, 0, 0.35);
 }
 
 .process-step.is-active .step-num {
-  color: rgba(255, 103, 0, 0.1);
-  -webkit-text-stroke-color: var(--clr-orange);
+  color: var(--clr-orange);
+  -webkit-text-stroke: 0;
 }
 
 /* ----- Tilt cards with light glare ----- */

@@ -101,6 +101,16 @@
     - **Reduced 'View All Services' Button Size**: Downsized `.center-cta .btn` with compact padding (`10px 22px`), 13.5px typography, and a 14px icon.
     - **Removed Card Lifting on Hover**: Removed `transform: translateY(-4px)` from `.service-card:hover` so cards stay completely stationary in place, retaining only the subtle image scale zoom (`transform: scale(1.05)`).
     - **Removed Watermarks from Top of Photos**: Cleaned and cropped the top watermark banner from the photo assets (`infinity-pool-retreat.webp`, `hillside-eco-cabins.webp`, `cow-house-left.webp`, `carved-stone-grotto.webp`, `morning-briefing.webp`, and `-800w` variants), eliminating the "FERROGRID" watermark text across cards.
+  - **Featured Projects Carousel Navigation & Portfolio Watermark Removal**:
+    - **Removed Watermarks from Portfolio Images**: Cleaned and cropped the top watermark banner from `earth-sheltered-retreat.webp`, `pool-and-cottage.webp`, `pool-and-cottage-800w.webp`, `garden-pool-retreat.webp`, and `garden-waterfall-pool.webp`, ensuring all 6 featured project cards are 100% free of the "FERROGRID" watermark label.
+    - **Repositioned & Styled Carousel Navigation**:
+      - Moved `.carousel-nav` down with generous breathing room (`margin-top: clamp(28px, 4vw, 44px)`).
+      - Positioned navigation buttons to the right side (`justify-content: flex-end; padding: 0 var(--panel-pad);`).
+      - Styled `.carousel-btn` as sleek 48px circular buttons (`border-radius: 50%`) with white background, crisp border, soft drop shadow, brand green hover fill (`background: var(--clr-green)`), subtle elevation, and disabled state handling.
+  - **Process Section ("How We Work") Card & Typography Refinements**:
+    - **Removed Hover Translation**: Removed `transform: translateY(-4px)` from `.process-step:hover` (`transform: none;`) so cards stay firmly in place without jumping or lifting on hover.
+    - **Gray Card Background**: Styled `.process-step` with a solid light gray background (`background: #f1f3f2; hover: #e8ecea`).
+    - **Solid Orange Step Numbers**: Updated `.step-num` from transparent stroked outline to solid brand orange (`color: var(--clr-orange); -webkit-text-stroke: 0; font-weight: 500;`) permanently across normal, hover, and active states.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
