@@ -358,12 +358,12 @@ export const HomePage: React.FC = () => {
         </div>
 
         <div className="center-cta reveal">
-          <a href="services.html" className="btn btn-ghost">
+          <a href="services.html" className="btn btn-ghost btn-sm">
             View All Services
             <svg
               className="btn-icon"
-              width="16"
-              height="16"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

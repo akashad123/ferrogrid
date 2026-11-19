@@ -97,6 +97,10 @@
       - `.service-card-media, .service-card-img`: restored to `border-radius: var(--radius-md)` (18px) with `overflow: hidden`.
       - `.btn-learn-more`: set to `border-radius: 999px` (pill button matching `.btn` system).
       - `.hero-stage`: configured with rounded bottom transition `border-radius: 0 0 var(--radius-xl) var(--radius-xl)` (`var(--radius-lg)` mobile) while maintaining full-width edge-to-edge top and sides without white borders.
+  - **What We Offer Section Interaction & Media Refinements**:
+    - **Reduced 'View All Services' Button Size**: Downsized `.center-cta .btn` with compact padding (`10px 22px`), 13.5px typography, and a 14px icon.
+    - **Removed Card Lifting on Hover**: Removed `transform: translateY(-4px)` from `.service-card:hover` so cards stay completely stationary in place, retaining only the subtle image scale zoom (`transform: scale(1.05)`).
+    - **Removed Watermarks from Top of Photos**: Cleaned and cropped the top watermark banner from the photo assets (`infinity-pool-retreat.webp`, `hillside-eco-cabins.webp`, `cow-house-left.webp`, `carved-stone-grotto.webp`, `morning-briefing.webp`, and `-800w` variants), eliminating the "FERROGRID" watermark text across cards.
 
 ## Commands for Handover
 - `npm run dev`: Starts local Vite dev server with client-side routing.
